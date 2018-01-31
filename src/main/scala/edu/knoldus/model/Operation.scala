@@ -29,5 +29,9 @@ class Operation {
         }
     }
   }
+
+  def fileRelativePath(fileList: List[File], originalPath: String): List[String] = {
+    fileList.map(listElement => listElement.toString.diff(originalPath))
+  }
 }
 
